@@ -1,0 +1,662 @@
+:root {
+    --jojo-purple: #4b0082;
+    --jojo-gold: #ffd700;
+    --jojo-pink: #ff00ff;
+    --jojo-green: #00ff00;
+    --jojo-black: #000000;
+    --jojo-white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--jojo-purple);
+    color: var(--jojo-white);
+    /* overflow: hidden -> auto に変更。縦向きiPadでスクロール可能に */
+    overflow-y: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* center -> flex-start に変更。コンテンツが溢れてもトップから表示 */
+    align-items: flex-start;
+}
+
+/* 擬音背景 */
+.jojo-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle, #6a0dad 0%, #2e0854 100%);
+    overflow: hidden;
+}
+
+.onomatopoeia {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    font-size: 5rem;
+    color: rgba(255, 215, 0, 0.2);
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.gogogo {
+    top: 10%;
+    left: 10%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.dododo {
+    bottom: 20%;
+    right: 15%;
+    animation: float 3s ease-in-out infinite reverse;
+}
+
+.zumm {
+    top: 50%;
+    right: 5%;
+    font-size: 3rem;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+}
+
+/* メインコンテナ */
+.app-container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 5px solid var(--jojo-gold);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    /* 縦向きiPad対策：コンテナ自体がスクロールできるように */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--jojo-gold);
+    text-shadow: 3px 3px 0 var(--jojo-pink), 6px 6px 0 var(--jojo-black);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--jojo-green);
+    margin-bottom: 1rem;
+}
+
+/* 今日の全問正解カウンター */
+.today-streak {
+    background: rgba(255, 100, 0, 0.15);
+    border: 2px solid #ff6400;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--jojo-white);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bgm-btn {
+    background: var(--jojo-black);
+    color: var(--jojo-gold);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 900;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+}
+
+.bgm-btn:hover {
+    background: var(--jojo-gold);
+    color: var(--jojo-black);
+    box-shadow: 0 0 10px var(--jojo-gold);
+}
+
+.screen {
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ボタン */
+.jojo-btn {
+    background: var(--jojo-gold);
+    color: var(--jojo-black);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--jojo-pink);
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.jojo-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    background: var(--jojo-white);
+    box-shadow: 6px 6px 0 var(--jojo-purple);
+}
+
+.jojo-btn:active {
+    transform: scale(0.95);
+}
+
+/* フォームと問題 */
+.character-box {
+    margin-bottom: 2rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.option-btn {
+    background: var(--jojo-gold);
+    color: var(--jojo-black);
+    border: none;
+    padding: 1.5rem 1rem;
+    font-size: 2.5rem; /* より大きく */
+    font-weight: 900;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 6px 6px 0 var(--jojo-pink);
+    transition: all 0.2s;
+    touch-action: manipulation; /* iPad等のタッチ遅延防止 */
+}
+
+.option-btn:hover {
+    transform: scale(1.05);
+    background: var(--jojo-white);
+}
+
+.option-btn:active {
+    transform: scale(0.95);
+}
+
+.game-character {
+    width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 10px var(--jojo-gold));
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.character-box img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid var(--jojo-gold);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px var(--jojo-pink);
+}
+
+.quote {
+    font-style: italic;
+    color: #ccc;
+}
+
+.progress-container {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.progress-bar {
+    background: var(--jojo-green);
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+#question-number {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 0.9rem;
+    color: var(--jojo-gold);
+}
+
+.question-box {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.question {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--jojo-white);
+    text-shadow: 4px 4px 0 var(--jojo-purple);
+}
+
+#answer-input {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.8rem;
+    font-size: 2rem;
+    border: 3px solid var(--jojo-gold);
+    background: var(--jojo-black);
+    color: var(--jojo-white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* フィードバック */
+.feedback-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.feedback-overlay.correct {
+    background: rgba(75, 0, 130, 0.8);
+    border: 10px solid var(--jojo-gold);
+    box-shadow: 0 0 100px var(--jojo-gold), inset 0 0 50px var(--jojo-gold);
+    animation: shiny-border 0.5s infinite alternate;
+}
+
+@keyframes shiny-border {
+    from { border-color: var(--jojo-gold); box-shadow: 0 0 50px var(--jojo-gold); }
+    to { border-color: var(--jojo-white); box-shadow: 0 0 100px var(--jojo-white); }
+}
+
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-character {
+    width: 300px; /* 特大表示 */
+    height: auto;
+    filter: drop-shadow(0 0 20px var(--jojo-gold));
+    margin-bottom: 1rem;
+    animation: pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.feedback-overlay.correct .feedback-text {
+    font-size: 8rem; /* さらに超拡大 */
+    color: var(--jojo-gold);
+    text-shadow: 0 0 20px var(--jojo-white), 10px 10px 0 var(--jojo-black);
+    animation: extreme-expand 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+@keyframes extreme-expand {
+    0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+    50% { transform: scale(1.5) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.feedback-subtext {
+    font-size: 1.5rem;
+    color: var(--jojo-white);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    animation: fade-in 0.3s ease-in 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+.feedback-overlay:not(.correct) .feedback-text {
+    font-size: 5rem;
+    color: var(--jojo-purple);
+    text-shadow: 4px 4px 0 var(--jojo-black);
+    animation: shake 0.2s infinite;
+}
+
+/* 結果画面 */
+.result-title {
+    color: var(--jojo-gold);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.score-display {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--jojo-pink);
+}
+
+.result-message {
+    font-size: 1.2rem;
+    color: var(--jojo-green);
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   図鑑（Zukan）のスタイル
+   ========================================= */
+.zukan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--jojo-purple);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.zukan-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.zukan-item:hover {
+    transform: scale(1.05);
+}
+
+.zukan-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;   /* cover → contain に変更。キャラ全体が見える */
+    object-position: center;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    background: rgba(0,0,0,0.2); /* 画像周りの余白を自然に見せる */
+}
+
+.zukan-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--jojo-white);
+}
+
+/* 通し番号バッジ（No.001形式） */
+.zukan-num {
+    font-size: 0.65rem;
+    color: var(--jojo-gold);
+    background: rgba(0,0,0,0.6);
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* 画像が壊れている場合のフォールバック */
+.zukan-fallback {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--jojo-gold);
+    background: rgba(255,255,255,0.05);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* 未解放（ロック）されたキャラクターのシルエット */
+.zukan-locked img {
+    filter: brightness(0); /* シルエットにする */
+    opacity: 0.5;
+}
+
+.zukan-locked .zukan-name {
+    color: #888;
+}
+
+/* スクロールバーの装飾 */
+.zukan-grid::-webkit-scrollbar {
+    width: 10px;
+}
+.zukan-grid::-webkit-scrollbar-thumb {
+    background: var(--jojo-gold);
+    border-radius: 5px;
+}
+
+/* =========================================
+   図鑑 拡大表示モーダル (Zukan Modal)
+   ========================================= */
+#zukan-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.zukan-modal-content {
+    background: radial-gradient(circle, var(--jojo-purple) 0%, rgba(0,0,0,1) 100%);
+    border: 4px solid var(--jojo-gold);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px var(--jojo-gold);
+    animation: zoomIn 0.3s ease-out forwards;
+}
+
+.zukan-modal-content img {
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.zukan-modal-name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--jojo-yellow);
+    text-shadow: 2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
+    margin-bottom: 0.5rem;
+}
+
+.zukan-modal-desc {
+    font-size: 1.1rem;
+    color: var(--jojo-white);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    max-width: 80%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-left: 4px solid var(--jojo-green);
+    border-radius: 5px;
+}
+
+/* =========================================
+   スマホ向けレスポンシブデザイン (Mobile)
+   ========================================= */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 1rem;
+        width: 95%;
+        border-width: 3px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 0 var(--jojo-pink), 4px 4px 0 var(--jojo-black);
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .bgm-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .question-box {
+        padding: 1rem;
+    }
+
+    .question {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .game-character {
+        width: 100px; /* 少し小さく */
+    }
+    
+    .character-box img {
+        width: 150px;
+    }
+
+    .options-grid {
+        gap: 0.8rem;
+    }
+
+    .option-btn {
+        padding: 1rem 0.5rem;
+        font-size: 1.8rem;
+        border-radius: 10px;
+    }
+
+    .feedback-character {
+        width: 200px;
+    }
+
+    .feedback-overlay.correct .feedback-text {
+        font-size: 4rem; /* スマホならこれでも特大 */
+    }
+
+    .feedback-overlay:not(.correct) .feedback-text {
+        font-size: 3rem;
+    }
+
+    .feedback-subtext {
+        font-size: 1rem;
+    }
+
+    .onomatopoeia {
+        font-size: 3rem; /* 背景の擬音も小さく */
+    }
+    
+    .result-title {
+        font-size: 1.5rem;
+    }
+    
+    .score-display {
+        font-size: 2rem;
+    }
+}
+/* =========================================
+   iPad縦向き（ポートレート）専用
+   768px以上の縦長画面に対応
+   ========================================= */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        padding: 0.5rem 0;
+        align-items: flex-start;
+    }
+
+    .app-container {
+        padding: 1.2rem;
+        width: 92%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .game-character {
+        width: 120px;
+    }
+
+    .character-box img {
+        width: 120px;
+    }
+
+    .option-btn {
+        padding: 1rem 0.5rem;
+        font-size: 2rem;
+    }
+
+    .options-grid {
+        gap: 1rem;
+    }
+
+    .jojo-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .question {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ジョジョの奇妙な算数 - 黄金の計算</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="jojo-background">
+        <div class="onomatopoeia gogogo">ゴゴゴゴ</div>
+        <div class="onomatopoeia dododo">ドドドド</div>
+        <div class="onomatopoeia zumm">ズキュウウウン</div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1 class="title">ジョジョの奇妙な算数 4択版</h1>
+            <p class="subtitle">〜 黄金の精神で10問を解き明かせ 〜</p>
+            <button id="bgm-toggle" class="bgm-btn">🎵 BGM ON</button>
+        </header>
+
+        <section id="start-screen" class="screen">
+            <!-- 今日の全問正解カウンター -->
+            <div id="today-streak-banner" class="today-streak">
+                🔥 今日の全問正解: <span id="today-count">0</span> 回
+            </div>
+            <div class="character-box">
+                <img id="char-img" src="https://via.placeholder.com/150/800080/FFFFFF?text=JOJO" alt="JOJO">
+                <p class="quote">「おまえは今まで食ったパンの枚数をおぼえているのか？」</p>
+            </div>
+            <button id="start-btn" class="jojo-btn" style="margin-right: 1rem;">練習を開始するッ！</button>
+            <button id="zukan-btn" class="jojo-btn" style="background: var(--jojo-purple); color: var(--jojo-gold); border: 2px solid var(--jojo-gold);">ジョジョ図鑑を見る👀</button>
+        </section>
+
+        <!-- 図鑑画面 -->
+        <section id="zukan-screen" class="screen hidden">
+            <h2 class="title" style="font-size: 2rem;">ジョジョ図鑑</h2>
+            <p class="subtitle">10問全問正解で新しいスタンド使いが解放されるぞッ！</p>
+            <div id="zukan-container" class="zukan-grid">
+                <!-- 図鑑のキャラがここに生成される -->
+            </div>
+            <button id="close-zukan-btn" class="jojo-btn">戻る</button>
+
+            <!-- 拡大表示用モーダル -->
+            <div id="zukan-modal" class="hidden">
+                <div class="zukan-modal-content">
+                    <img id="zukan-modal-img" src="" alt="拡大画像">
+                    <div id="zukan-modal-name" class="zukan-modal-name">承太郎</div>
+                    <p id="zukan-modal-desc" class="zukan-modal-desc">スタープラチナの本体。冷静沈着で無敵のスタンドを操る。</p>
+                    <button id="zukan-modal-close" class="jojo-btn">閉じる</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-screen" class="screen hidden">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                <span id="question-number">1 / 10</span>
+            </div>
+
+            <div class="question-box">
+                <div id="question-text" class="question">12 + 8 = ?</div>
+                <div id="options-container" class="options-grid">
+                    <!-- 4択ボタンがここに生成される -->
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback-overlay hidden">
+                <div class="feedback-content">
+                    <img id="feedback-char-img" class="feedback-character" src="" alt="feedback-char">
+                    <div id="feedback-text" class="feedback-text">オラオラ！</div>
+                    <div id="feedback-subtext" class="feedback-subtext">正解だッ！</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-screen" class="screen hidden">
+            <h2 class="result-title">最高に「ハイ！」ってやつだアアアアア！</h2>
+            <div class="score-display">
+                <span id="final-score">10</span> / 10 問正解
+            </div>
+            <!-- 今日の全問正解カウンター（結果画面） -->
+            <div id="result-streak" class="today-streak" style="margin: 0.8rem 0;"></div>
+            <div id="result-message" class="result-message">
+                君の計算能力はスタアプラチナ級だッ！
+            </div>
+            
+            <!-- ボタン群を縦などに並べやすくするコンテナ -->
+            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 1.5rem;">
+                <button id="restart-btn" class="jojo-btn">もう一度挑むッ！</button>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <button id="result-zukan-btn" class="jojo-btn" style="background: var(--jojo-purple); color: var(--jojo-gold); border: 2px solid var(--jojo-gold);">ジョジョ図鑑を見る👀</button>
+                    <button id="back-to-title-btn" class="jojo-btn" style="background: #333; color: white; border: 2px solid #555;">タイトルへ戻る</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
