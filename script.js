@@ -1096,6 +1096,465 @@ const CHARACTERS = [
         successMessages: [{"text": "ウキキキ！", "sub": "お猿さんでもわかる完璧な正解だ！"}, {"text": "巨大な計算", "sub": "船のようにデカい正解だぜ！"}], 
         failMessages: [{"text": "グウウ…", "sub": "計算ミスして怒っているぞ！"}, {"text": "沈没だ…", "sub": "間違えてすべてが水の泡だ！"}]
     }
+,
+    { 
+        name: "アレッシー", 
+        img: "assets/Alessi_Infobox_Manga.png", 
+        quotes: ["「えらいねぇ〜」", "「だらしねぇ顔しやがってよォ！」"],
+                description: "セト神の本体。影に触れた相手を若返らせる卑劣な男。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "アヌビス神(刀)", 
+        img: "assets/Anubis_Appearance.png", 
+        quotes: ["「私は刀のスタンド、アヌビス神だ」", "「一度戦った相手には絶対勝つッ！」"],
+                description: "持ち主を操る意思を持つ刀のスタンド。戦うほどに成長し、相手の技を記憶する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "アヌビス神", 
+        img: "assets/Anubis_Infobox_Manga.png", 
+        quotes: ["「抜かれるのを待っていたのだ」", "「さあ、私を抜くのだッ！」"],
+                description: "500年以上前の刀匠キャラバン・サライが打ったと言われる、意思を持つスタンド。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ポルナレフ(アヌビス神)", 
+        img: "assets/Anubis_Silver_Charriot.png", 
+        quotes: ["「二刀流のチャリオッツだッ！」", "「もうおまえの動きは覚えたぞッ！」"],
+                description: "アヌビス神に操られたポルナレフ。二刀流による凄まじい攻撃を繰り出す。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "アラビア・ファッツ", 
+        img: "assets/Arabia_Fats_Infobox_Manga.png", 
+        quotes: ["「（鏡の中に隠れている...）」", "「太陽からは逃げられんッ！」"],
+                description: "サンの本体。砂漠で鏡張りの建物に隠れ、熱で一行を苦しめた。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "カメオ", 
+        img: "assets/Cameo_Infobox_Manga.png", 
+        quotes: ["「願い事を３つ叶えてやろう...」", "「Hail 2 U（君に幸あれ）！」"],
+                description: "ジャッジメントの本体。地面に穴を掘り、そこから願いを叶えるフリをして攻撃する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "偽テニール船長", 
+        img: "assets/Cpt_Tennille_Infobox_Manga.png", 
+        quotes: ["「海の中なら俺は無敵だッ！」", "「ダークブルー・ムーン！水中戦だ！」"],
+                description: "ダークブルー・ムーンの本体。本物の船長を殺してすり替わった偽物。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ダニエル・J・ダービー", 
+        img: "assets/Daniel_J._D'Arby_Infobox_Manga.png", 
+        quotes: ["「魂を賭ける（コール）ぜッ！」", "「GOOD!」"],
+                description: "オシリス神の本体。ギャンブルの天才で、負けた者の魂をコインに変える。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "呪いのデーボ", 
+        img: "assets/Devo_Infobox_Manga.png", 
+        quotes: ["「恨みはパワーだッ！」", "「エボニー・デビルで切り刻んでやる！」"],
+                description: "エボニー・デビルの本体。受けた傷を恨みに変え、人形で遠隔攻撃する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ディオ・ブランドー", 
+        img: "assets/Dio_PB_Infobox_Manga.png", 
+        quotes: ["「おまえは今まで食ったパンの枚数をおぼえているのか？」", "「無駄無駄無駄無駄ァ！」"],
+                description: "ジョースター家の養子となり、石仮面で吸血鬼となった男。全ての因縁の始まり。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "未起隆（サイレン）", 
+        img: "assets/EWF_Infobox_Manga.png", 
+        quotes: ["「私は宇宙人です」", "「アース・ウインド・アンド・ファイヤー！」"],
+                description: "自称宇宙人の不思議な少年。あらゆる物体に変身する能力を持つ。サイレンの音が苦手。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "エンヤ婆", 
+        img: "assets/Enya_Infobox_Manga.png", 
+        quotes: ["「ジャスティス（正義）が裁くッ！」", "「DIO様を裏切る者は許さん！」"],
+                description: "ジャスティスの本体。霧を操り死体を自在に動かす。スタンドの矢の秘密を知る老婆。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "エシディシ", 
+        img: "assets/Esidisi_Infobox_Manga.png", 
+        quotes: ["「あァァァんまりだァァアア！！」", "「怪焔王の流法（モード）！」"],
+                description: "柱の男の一人。炎を操る。感情が高ぶると激しく泣いて冷静さを取り戻す。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "グレー・フライ", 
+        img: "assets/Gray_Fly_Infobox_Manga.png", 
+        quotes: ["「飛行機の中で死ねッ！」", "「タワー・オブ・グレーは光よりも速い！」"],
+                description: "タワー・オブ・グレーの本体。老人の姿をしているが、極めて高い殺傷能力を持つ。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "J・ガイル", 
+        img: "assets/JGeil_Infobox_Manga.png", 
+        quotes: ["「鏡の中に世界はない...」", "「ハングドマンが喉元を裂くッ！」"],
+                description: "ハングドマンの本体。エンヤ婆の息子。両手が右手で、鏡の中を移動して攻撃する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "老ジョセフ", 
+        img: "assets/Joseph_SC_Infobox_Manga.png", 
+        quotes: ["「隠者の紫（ハーミットパープル）！」", "「OH NO!」"],
+                description: "隠者の紫の本体。承太郎の祖父で、歴戦の勇士。念写能力でDIOを追う。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ジャッジメント", 
+        img: "assets/Judgement_Infobox_Manga.png", 
+        quotes: ["「HAIL 2 U!」", "「願いを叶えてやろう...」"],
+                description: "カメオのスタンド。土で土人形を作り出し、相手の願いを歪んだ形で実現する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "花京院(原作)", 
+        img: "assets/Kakyoin_Infobox_Manga.png", 
+        quotes: ["「エメラルドスプラッシュ！」", "「時計の針を止めてやったぞ...」"],
+                description: "ハイエロファントグリーンの本体。冷静で礼儀正しいが、内に熱い闘志を秘めた少年。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "カーズ", 
+        img: "assets/Kars_Infobox_Manga.png", 
+        quotes: ["「輝彩滑刀（きさいかっとう）の流法！」", "「究極の生命体（アルティミット・シィング）だッ！」"],
+                description: "柱の男のリーダー。石仮面の製作者。光り輝く刃で攻撃する。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "カーン", 
+        img: "assets/Khan_Infobox_Manga.png", 
+        quotes: ["「私は刀の達人だッ！」", "「アヌビス神の刃を受けてみろ！」"],
+                description: "アヌビス神に操られた理髪師。凄まじいスピードの剣技を繰り出した。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "マニッシュ・ボーイ", 
+        img: "assets/Mannish_Boy_Infobox_Manga.png", 
+        quotes: ["「（不敵に笑う天才児...）」", "「デス13の世界へようこそ！」"],
+                description: "デス13の本体。生後11ヶ月の天才児。夢の中のスタンドでジョースター一行を窮地に陥れた。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "マライア", 
+        img: "assets/Mariah_Infobox_Manga.png", 
+        quotes: ["「バステト神に触れたわね...」", "「鉄が集まって押しつぶされるがいいわ！」"],
+                description: "バステト神の本体。コンセントのようなスタンドで触れた者を磁石に変える。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "Midler_Revealed_Infobox", 
+        img: "assets/Midler_Revealed_Infobox.png", 
+        quotes: ["「オラオラ！新キャラだッ！」", "「グレートですよこいつはァ！」"],
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3"
+    }
+,
+    { 
+        name: "支倉未起隆", 
+        img: "assets/Mikitaka_Hazekura_Infobox_Manga.png", 
+        quotes: ["「宇宙人ですから」", "「コンパスに変身しましょうか？」"],
+                description: "自称宇宙人。あらゆる物体に変身するが、自分の意図しないものになると苦しむ。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ンドゥール", 
+        img: "assets/N'Doul_Infobox_Manga.jpg", 
+        quotes: ["「悪には悪の救世主が必要なんだ」", "「ゲブ神、音を捕らえろッ！」"],
+                description: "ゲブ神の本体。盲目だが、音だけで相手の動きを察知するエジプト9栄神の男。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "オシリス神", 
+        img: "assets/Osiris_Infobox_Manga.png", 
+        quotes: ["「負けを認めたな（CHECK MATE）！」", "「魂をコインにしてくれる...」"],
+                description: "ダニエル・J・ダービーのスタンド。ギャンブルで負けを認めた相手の魂を奪う。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ペット・ショップ", 
+        img: "assets/Pet_Shop_Infobox_Manga.png", 
+        quotes: ["「ホホッ！（鋭い鳴き声...）」", "「ホルス神、全てを凍りつかせろ！」"],
+                description: "ホルス神の本体。DIOの館を守るハヤブサ。冷気を自在に操る。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ポルナレフ(原作)", 
+        img: "assets/Polnareff_SC_Infobox_Manga.png", 
+        quotes: ["「あ...ありのまま今起こった事を話すぜ！」", "「シルバーチャリオッツ！」"],
+                description: "シルバーチャリオッツの本体。妹の仇を討つためにDIOを追い、ジョースター一行に加わった。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "スピードワゴン", 
+        img: "assets/SPW_PB_Infobox_Manga.png", 
+        quotes: ["「食らえ！刃付き帽子ッ！」", "「スピードワゴンはクールに去るぜ」"],
+                description: "食屍鬼街のボスだったが、ジョナサンの高潔な精神に心打たれ、親友となった。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "セト神", 
+        img: "assets/Sethan_Infobox_Manga.png", 
+        quotes: ["「影に触れたな...！」", "「チャッ、チャッ、チャッ、チャッ！」"],
+                description: "アレッシーのスタンド。影に触れた相手の時間を遡らせ、赤ん坊や子供に戻す。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "静", 
+        img: "assets/Shizuka_Infobox_Manga.png", 
+        quotes: ["「（おしゃぶりをしゃぶる音...）」", "「アクトン・ベイビー！」"],
+                description: "透明になる赤ちゃん。ジョセフに拾われたスタンド使いの乳児。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "鋼入りのダン", 
+        img: "assets/Steely_Dan_Infobox_Manga.png", 
+        quotes: ["「お仕置きの時間だッ！」", "「ラバーズ、脳内に侵入しろ！」"],
+                description: "ラバーズの本体。自分の苦痛を相手に倍返しする能力を持つ。DIOの刺客の中でも特に卑劣。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "スーパー・フライ", 
+        img: "assets/Super_Fly_Infobox_Manga.png", 
+        quotes: ["「この鉄塔から出る事はできん！」", "「反射のダメージがあるぞッ！」"],
+                description: "鋼田一豊大のスタンド。送電鉄塔の姿をしており、一人の人間を中に閉じ込め続ける。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "サーフィス", 
+        img: "assets/Surface_Infobox_Manga.png", 
+        quotes: ["「おまえの動きをコピーしたぜ！」", "「人形の俺に勝てるかな？」"],
+                description: "間田敏和のスタンド。木製のデッサン人形で、触れた相手の姿と性格を完全にコピーする。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "小林玉美", 
+        img: "assets/Tamami_Kobayashi_Normal_Infobox_Manga.png", 
+        quotes: ["「罪悪感を感じているようだな...」", "「ザ・ロック！錠前をかけるッ！」"],
+                description: "ザ・ロックの本体。相手の罪悪感に反応して心に錠前をかけ、重圧を与える。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ザ・ロック", 
+        img: "assets/The_Lock_Infobox_Manga.png", 
+        quotes: ["「この重さに耐えきれるかな？」", "「カシャッ（錠前が閉じる音）」"],
+                description: "小林玉美のスタンド。罪悪感を持つ者の心身を物理的に重くしていく錠前。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "間田敏和", 
+        img: "assets/Toshikazu_Hazamada_Infobox_Manga.png", 
+        quotes: ["「木の人形が最強なんだ！」", "「サーフィス、そいつを殴れ！」"],
+                description: "サーフィスの本体。小心者で陰湿な性格だが、スタンド使いとして仗助達の前に立ちはだかった。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "タワー・オブ・グレー", 
+        img: "assets/Tower_of_Gray_Infobox_Manga.png", 
+        quotes: ["「光よりも速く飛ぶッ！」", "「針で舌を抜き取ってやる！」"],
+                description: "グレー・フライのスタンド。カブトムシのような姿で、銃弾をかわすほどの超スピード。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "鋼田一豊大", 
+        img: "assets/Toyohiro_Kanedaichi_Infobox_Manga.png", 
+        quotes: ["「俺はこの鉄塔で生きていくッ！」", "「スーパー・フライを楽しんでくれ...」"],
+                description: "スーパー・フライの本体。一生鉄塔の中で自給自足の生活を夢見ていた。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ヴァニラ・アイス", 
+        img: "assets/Vanilla_Ice_Infobox_Manga.png", 
+        quotes: ["「暗黒空間にバラ撒いてやるッ！」", "「DIO様のために死ねェーーッ！！」"],
+                description: "クリームの本体。暗黒空間を操るDIOの最側近。DIOへの忠誠心は狂気的。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ワムウ", 
+        img: "assets/Wamuu_Infobox_Manga.png", 
+        quotes: ["「風の流法！神砂嵐！」", "「私は戦士だッ！」"],
+                description: "柱の男の一人。誇り高き戦士。風を操り、必殺技は「神砂嵐」。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
+,
+    { 
+        name: "ズィー・ズィー", 
+        img: "assets/ZZ_Infobox_Manga.png", 
+        quotes: ["「車がスタンドなんだッ！」", "「ホイール・オブ・フォーチュン！」"],
+                description: "ホイール・オブ・フォーチュンの本体。愛車を強化し、ジョースター一行を追いつめた。",
+        successSFX: "correct.mp3",
+        failSFX: "wrong.mp3",
+        successMessages: [{"text": "YES!", "sub": "正解だッ！"}, {"text": "グレート", "sub": "黄金の精神を感じるぞ"}], 
+        failMessages: [{"text": "無駄無駄ァ！", "sub": "計算が甘いぞ！"}, {"text": "やれやれ", "sub": "やり直せッ！"}]
+    }
     // AUTO_GEN_CHARACTERS_END
 ];
 
