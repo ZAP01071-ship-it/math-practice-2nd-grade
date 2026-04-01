@@ -39,16 +39,7 @@ const CHARACTERS = [
         successMessages: [{"text": "YES I AM!", "sub": "正解に決まっているッ！"}, {"text": "灼熱の正解！", "sub": "ファイヤーッ！いい計算だ！"}], 
         failMessages: [{"text": "チッチッ！", "sub": "お前の計算は甘いぞ"}, {"text": "占い（計算）が…", "sub": "外れただと…ッ！"}]
     },
-    { 
-        name: "ポルナレフ", 
-        img: "assets/polnareff.png", 
-        quotes: ["「ブラボー！おお...ブラボー！！」", "「あ...ありのまま今起こったことを話すぜ！」"], 
-        description: "シルバーチャリオッツの本体。騎士道精神に溢れる剣士。", 
-        successSFX: "correct.mp3", 
-        failSFX: "wrong.mp3", 
-        successMessages: [{"text": "ブラボー！", "sub": "おお…ブラボー！！正解だ！"}, {"text": "騎士道精神！", "sub": "正解の剣筋が見えたぜッ！"}], 
-        failMessages: [{"text": "あ…ありのまま", "sub": "今起こった計算ミスを話すぜ…"}, {"text": "トイレに…", "sub": "ブタがいた時のような衝撃だぜ"}]
-    },
+    
     { 
         name: "イギー", 
         img: "assets/iggy_manga.png", 
