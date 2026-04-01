@@ -351,6 +351,20 @@ body {
     border-radius: 10px;
     animation: fade-in 0.3s ease-in 0.4s forwards;
     opacity: 0;
+    margin-bottom: 2rem;
+}
+
+.tap-to-next {
+    color: var(--jojo-gold);
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: blink 1s infinite alternate;
+    margin-top: 1rem;
+}
+
+@keyframes blink {
+    from { opacity: 0.3; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(5px); }
 }
 
 @keyframes fade-in {
@@ -534,6 +548,82 @@ body {
     padding: 10px;
     border-left: 4px solid var(--jojo-green);
     border-radius: 5px;
+}
+
+/* =========================================
+   アンロック（新キャラ獲得）演出
+   ========================================= */
+.unlock-banner {
+    background: radial-gradient(circle, rgba(255,0,255,0.3) 0%, rgba(0,0,0,0.8) 100%);
+    border: 4px solid var(--jojo-pink);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px var(--jojo-pink), inset 0 0 20px var(--jojo-purple);
+    animation: unlock-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, unlock-glow 2s infinite alternate;
+}
+
+@keyframes unlock-pop {
+    0% { transform: translateY(50px) scale(0.5); opacity: 0; }
+    50% { transform: translateY(-10px) scale(1.05); opacity: 1; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes unlock-glow {
+    0% { box-shadow: 0 0 20px var(--jojo-pink); }
+    100% { box-shadow: 0 0 50px var(--jojo-pink), 0 0 20px var(--jojo-gold); }
+}
+
+.unlock-title {
+    font-size: 1.6rem;
+    color: var(--jojo-gold);
+    font-weight: 900;
+    text-shadow: 2px 2px 0 var(--jojo-black), 0 0 10px var(--jojo-white);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    animation: flash-text 0.5s infinite alternate;
+}
+
+@keyframes flash-text {
+    0% { color: var(--jojo-gold); text-shadow: 2px 2px 0 var(--jojo-pink); }
+    100% { color: var(--jojo-white); text-shadow: 3px 3px 0 var(--jojo-pink), 0 0 15px var(--jojo-yellow); }
+}
+
+.unlock-img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 4px solid var(--jojo-gold);
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+    animation: spin-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes spin-in {
+    0% { transform: rotate(-720deg) scale(0); opacity: 0; }
+    100% { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+.unlock-name {
+    font-size: 2.2rem;
+    color: var(--jojo-white);
+    font-weight: 900;
+    text-shadow: 4px 4px 0 var(--jojo-purple), 0 0 10px var(--jojo-pink);
+    margin-bottom: 0.5rem;
+}
+
+.unlock-desc {
+    font-size: 1.2rem;
+    color: var(--jojo-green);
+    font-weight: bold;
 }
 
 /* =========================================
