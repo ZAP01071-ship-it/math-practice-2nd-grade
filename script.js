@@ -1051,9 +1051,7 @@ const CHARACTERS = [
         description: "ジョースター家第2代。生まれつき波紋の才能を持ち、機転と知略を駆使して戦う。",
         successSFX: "correct.mp3",
                 failSFX: "wrong.mp3",
-                successMessages: [{"text": "次のセリフは", "sub": "『やったぜ！』という！大正解！"}, {"text": "計算通り！", "sub": "これも計算のうちかJOJOーッ！？"}], 
-        failMessages: [{"text": "逃げるんだよォ！", "sub": "計算ミスしたらとりあえず逃げるんだよォ！"}, {"text": "ハッピーうれぴー", "sub": "って、間違えてるじゃあねーか！"}]
-    }, {"text": "計算通り！", "sub": "これも計算のうちかJOJOーッ！？"}], 
+        successMessages: [{"text": "次のセリフは", "sub": "『やったぜ！』という！大正解！"}, {"text": "計算通り！", "sub": "これも計算のうちかJOJOーッ！？"}], 
         failMessages: [{"text": "逃げるんだよォ！", "sub": "計算ミスしたらとりあえず逃げるんだよォ！"}, {"text": "ハッピーうれぴー", "sub": "って、間違えてるじゃあねーか！"}]
     }
 ,
@@ -1065,8 +1063,6 @@ const CHARACTERS = [
         successSFX: "correct.mp3",
                 failSFX: "wrong.mp3",
                 successMessages: [{"text": "オラオラ！", "sub": "スタープラチナの精密な動きで大正解だ！"}, {"text": "裁くのは俺のスタンドだ", "sub": "見事な計算だ、やれやれだぜ。"}], 
-        failMessages: [{"text": "やれやれだぜ", "sub": "こんな単純な計算ミスをするとはな…"}, {"text": "てめーは俺を怒らせた", "sub": "怒りのオラオララッシュが必要だな！"}]
-    }, {"text": "裁くのは俺のスタンドだ", "sub": "見事な計算だ、やれやれだぜ。"}], 
         failMessages: [{"text": "やれやれだぜ", "sub": "こんな単純な計算ミスをするとはな…"}, {"text": "てめーは俺を怒らせた", "sub": "怒りのオラオララッシュが必要だな！"}]
     }
 ,
