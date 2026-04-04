@@ -94,10 +94,28 @@ body {
 }
 
 .title {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
     font-size: 2.5rem;
     color: var(--jojo-gold);
     text-shadow: 3px 3px 0 var(--jojo-pink), 6px 6px 0 var(--jojo-black);
-    margin-bottom: 0.5rem;
+}
+
+#title-logo {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#title-logo:hover {
+    transform: scale(1.05) rotate(1deg);
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.7));
 }
 
 .subtitle {
